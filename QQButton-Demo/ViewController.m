@@ -20,12 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    UIButton * creatBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    creatBtn.frame = CGRectMake(100, 100, 100, 30);
-    creatBtn.backgroundColor = [UIColor redColor];
-    [creatBtn setTitle:@"creat" forState:UIControlStateNormal];
-    [creatBtn addTarget:self action:@selector(creatBtn) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:creatBtn];
+    _addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _addBtn.frame = CGRectMake(100, 100, 100, 30);
+    _addBtn.backgroundColor = [UIColor redColor];
+    _addBtn.layer.masksToBounds = YES;
+    _addBtn.layer.cornerRadius = 30/2.0;
+    [_addBtn setTitle:@"creat" forState:UIControlStateNormal];
+    [_addBtn addTarget:self action:@selector(creatBtn) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_addBtn];
     
     
 }
