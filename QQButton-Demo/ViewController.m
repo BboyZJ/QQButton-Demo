@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic,strong)UIButton * addBtn;
+
 @end
 
 @implementation ViewController
